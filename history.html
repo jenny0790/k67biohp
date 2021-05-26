@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>K67BIO</title>
+    
+    <!-- style -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+    /* Set a background color */
+
+
+/* The actual timeline (the vertical ruler) */
+.timeline {position: relative;max-width: 1000px;margin: 0 auto;padding-top:100px; }
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #91ac4b;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  
+}
+
+/* Container around content */
+.container {
+  padding: 40px 0px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #91ac4b;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {left: 5;}
+
+/* Place the container to the right */
+.right {left: 50%;}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 22px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent #eee ;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 22px;
+  border: medium solid #eee;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #eee;}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 40px;
+  background-color: #eee;
+  position: relative;
+  border-radius: 6px;
+}
+        .left .content{
+            left:-30px;
+            top:-20px;
+        }
+        .right .content{
+            left:30px;
+            top: -20px;
+        }
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after{left: 15px;}
+
+/* Make all right containers behave like the left ones */
+  .right {left: 0%;}
+    </style>
+
+</head>
+<body>
+    <div id="warp">
+        <header id="header" class="clearfix">
+            <h1><a href="#"><img src="image/%EB%A1%9C%EA%B3%A0(%EA%B0%80%EB%A1%9C).png" alt="k67bio"></a></h1>
+            <nav class="nav">
+                <ul class="clearfix">
+                    <li><a class="bold" href="#">회사소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">회사소개</a></li>
+                            <li><a class="bold" href="#">회사연혁</a></li>
+                            <li><a href="#">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">사업소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">사업소개</a></li>
+                            <li><a href="#">제품생산과정</a></li>
+                            <li><a href="#">제품소개</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">R&amp;D</a>
+                        <ul class="submenu">
+                            <li><a href="#">주요연구개발</a></li>
+                            <li><a href="#">R&amp;D</a></li>
+                            <li><a href="#">특허 및 인증</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">공지사항</a>
+                        <ul class="submenu">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">NEWS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">문의하기</a></li>
+                    <li class="mall"><a href="#">자사몰</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- //header-->
+
+       <div class="stitle">
+           <h1>회사연혁</h1>
+       </div>
+       <section id="history">
+          <div class="timeline">
+              <div class="container left">
+                <div class="content">
+                  <h2>2021</h2>
+                  <p>지방중소벤처기업 여성기업 등록</p>
+                  <p>2021 대구국제뷰티엑스포 참가</p>
+                </div>
+              </div>
+              <div class="container right">
+                <div class="content">
+                  <h2>2020</h2>
+                  <p>클루엔코(경상북도 화장품 공동브랜드) 회원사 등록</p>
+                </div>
+              </div>
+              <div class="container left">
+                <div class="content">
+                  <h2>2019</h2>
+                  <p>케이67바이오 공식 온라인스토어 입점</p>
+                </div>
+              </div>
+              <div class="container right">
+                <div class="content">
+                  <h2>2018</h2>
+                  <p>대구한의대학교 산학협력업체기업 등록</p>
+                </div>
+              </div>
+              <div class="container left">
+                <div class="content">
+                  <h2>2019</h2>
+                  <p>농업회사법인 (주)케이67농사랑 자회사 설립</p>
+                </div>
+              </div>
+              <div class="container right">
+                <div class="content">
+                  <h2>2017</h2>
+                  <p>(주)케이67바이오 법인설립</p>
+                  <p>화장품 제조업 공장 등록</p>
+                </div>
+              </div>
+          </div>
+        </section>
+    
+
+        <footer id="footer" class="clearfix">
+            <div class="foot">
+                <address>
+                    주식회사 케이67바이오<br>
+                    대표자:고은미<br>
+                    주소: 경북 경산시 어봉지길 285-10 대구한의대학교 오성캠퍼스 미래관 306호<br>
+                    사업자등록번호 : 654-86-00854<br>
+                    Tel. 053-816-5595 | Fax. 053-816-5525<br>
+                    E-mail. k67bio1024@naver.com
+                </address>
+            </div>
+        </footer>
+        <!-- //footer-->
+    </div>
+    <!-- //warp-->
+    
+    <!-- script -->
+    <script src="script/jquery.min.js"></script>
+    <script src="script/custom.js"></script>
+</body> 
+</html>
